@@ -9,10 +9,57 @@ import { Button } from "@swc-react/button";
 import { Theme } from "@swc-react/theme";
 import React from "react";
 import "./App.css";
+import OpenAI from "openai";
 
 const App = ({ addOnUISdk, sandboxProxy }) => {
-    function handleClick() {
-        sandboxProxy.createRectangle();
+    const [responseText, setResponseText] = React.useState("");
+
+    async function handleClick() {
+        const renditionOptions = {
+            range: addOnUISdk.constants.Range.entireDocument,
+            format: addOnUISdk.constants.RenditionFormat.png,
+            backgroundColor: 0x7FAA77FF
+        };
+
+        const renditions = await addOnUISdk.app.document.createRenditions(
+            renditionOptions, addOnUISdk.constants.RenditionIntent.export
+        );
+
+        const rendition = renditions[0];
+
+        const openai = new OpenAI({
+            organization: process.env.OPENAI_ORGANIZATION,
+            project: process.env.OPENAI_PROJECT,
+            apiKey: process.env.OPENAI_API_KEY,
+            dangerouslyAllowBrowser: true
+        });
+
+        const reader = new FileReader();
+        reader.readAsDataURL(rendition.blob);
+
+        reader.onloadend = async function () {
+            const response = await openai.chat.completions.create({
+                model: "gpt-4o-mini",
+                messages: [
+                    {
+                        role: "user",
+                        content: [
+                            {
+                                "type": "text",
+                                "text": "Generate alt text for this image."
+                            },
+                            {
+                                "type": "image_url",
+                                "image_url": { "url": reader.result }
+                            }
+                        ]
+                    }
+                ],
+                max_tokens: 500
+            })
+
+            setResponseText(response.choices[0].message.content);
+        }
     }
 
     return (
@@ -21,8 +68,12 @@ const App = ({ addOnUISdk, sandboxProxy }) => {
         <Theme theme="express" scale="medium" color="light">
             <div className="container">
                 <Button size="m" onClick={handleClick}>
-                    Create Rectangle
+                    Generate Alt Text
                 </Button>
+                <br />
+                <div>
+                    <span>{responseText}</span>
+                </div>
             </div>
         </Theme>
     );
