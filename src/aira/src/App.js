@@ -13,7 +13,7 @@ function DropdownMenu() {
 
   return (
     <div>
-      <button onClick={toggleDropdown}>Dropdown Button</button>
+      <button classname="menu-button" onClick={toggleDropdown}>Dropdown Button</button>
       {isOpen && (
         <ul className="menu">
           <li>Option 1</li>

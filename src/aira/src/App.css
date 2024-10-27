@@ -37,6 +37,7 @@
   }
 } */
 
+
 main {
   display: flex;
   align-items: center;
@@ -87,6 +88,10 @@ main {
   left: 1;
 }
 
+.menu-button {
+  font-family: "Playwrite GB S", cursive;
+}
+
 .info-image {
   max-width: 40%; /* Responsive image */
   height: auto;
@@ -119,6 +124,7 @@ main {
   border-radius: 16px;
   cursor: pointer;
 
+  font-family: "Playwrite GB S", cursive;
   text-align: center;
   text-decoration: none;
   display: inline-block;
