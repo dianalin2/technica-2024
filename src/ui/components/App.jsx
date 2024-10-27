@@ -74,6 +74,10 @@ const App = ({ addOnUISdk, sandboxProxy }) => {
                 <div>
                     <span>{responseText}</span>
                 </div>
+                <br />
+                <Button size = "m" onClick={() =>  navigator.clipboard.writeText(responseText)}>
+                    Copy Alt Text
+                </Button>
             </div>
         </Theme>
     );
