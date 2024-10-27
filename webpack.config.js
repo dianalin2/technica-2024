@@ -1,6 +1,10 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const { EnvironmentPlugin } = require("webpack");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const isEnvProduction = process.env.NODE_ENV === "production";
 
@@ -33,6 +37,11 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [{ from: "src/*.json", to: "[name][ext]" }]
+        }),
+        new EnvironmentPlugin({
+            OPENAI_ORGANIZATION: process.env.OPENAI_ORGANIZATION,
+            OPENAI_PROJECT: process.env.OPENAI_PROJECT,
+            OPENAI_API_KEY: process.env.OPENAI_API_KEY
         })
     ],
     module: {
