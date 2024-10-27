@@ -38,14 +38,20 @@
 } */
 
 
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap%27');
+
 main {
   display: flex;
   align-items: center;
   gap: 100px;
+  margin-right: 10px;
+  margin-top: -10px;
 }
 
 .app-container {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   padding: 0px;
   /* text-align: center; */
   background: linear-gradient(90deg, #93dff7, #ecaeff);
@@ -89,7 +95,7 @@ main {
 }
 
 .menu-button {
-  font-family: "Playwrite GB S", cursive;
+  font-family: "Fira Sans", cursive;
 }
 
 .info-image {
@@ -106,8 +112,10 @@ main {
 }
 
 .paragraph {
-  margin: 0px 0;
+  font-family: "Poppins", cursive;
+  margin-right: 30px;
   font-size: 20px;
+  margin-top: -20px;
 }
 
 .button-container {
@@ -124,13 +132,31 @@ main {
   border-radius: 16px;
   cursor: pointer;
 
-  font-family: "Playwrite GB S", cursive;
+  font-family: "Poppins", cursive;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
 
+  height: 40px;
+  width: 140px;
+}
+
+.link-button{
+  background-color: #745488;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+
+  font-family: "Poppins", cursive;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  line-height: 40px;
   height: 40px;
   width: 140px;
 }

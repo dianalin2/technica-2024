@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import adobeimg from './adobe express.png';
 
-
 import { useState } from 'react';
 function DropdownMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +25,7 @@ function DropdownMenu() {
 }
 
 const App = () => {
+  const learnMoreRef = React.useRef();
   return (
     <div className="app-container">
       <header className="title-bar">
@@ -50,8 +50,8 @@ const App = () => {
             Welcome to AIRA, an Artificial Intelligence (w)Riter App designed so you can create a more accessible world. Graphics, no matter how well made, aren't always easy to read. With AIRA, creating alt-text has never been easier. Simply download our Adobe Express add-on, click generate alt-text, and upload it alongside your graphic. In just three easy steps, graphic designers and content creators everywhere can ensure that the everyone can access their designs. This product was coded with React, Adobe Express CLI, and the OpenAI library. Happy creating!   
           </p>
           <div className="button-container">
-            <button className="action-button">Learn More</button>
-            <button className="action-button">Try Now</button>
+            <button className="action-button" onClick={() => {learnMoreRef.current.scrollIntoView({ behavior: "smooth"});}}>Learn More</button>
+            <a class="link-button" href="https://www.adobe.com/express/">Try now</a>
           </div>
         </div>
       </main>
@@ -63,7 +63,7 @@ const App = () => {
       
       
       <div className="mydivcontainer">
-        <div className="mydiv">lu la la lu la la lu la lu la lei</div>
+        <div className="mydiv" ref = {learnMoreRef}>lu la la lu la la lu la lu la lei</div>
         <div className="mydiv">lu la lu la lu la lu la lu la lei</div>
         <div className="mydiv">lu la la lu la la lu la lu la lei</div>
       </div>
