@@ -1,0 +1,147 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+main {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.app-container {
+  font-family: Arial, sans-serif;
+  padding: 0px;
+  /* text-align: center; */
+  background: linear-gradient(90deg, #93dff7, #ecaeff);
+}
+
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #caf3ff, #f3d2fd);
+  padding: 10px;
+  text-align: center;
+}
+
+.logo {
+  height: 50px;
+  color: white;
+  margin-left: 2%;
+}
+
+.font {
+  height: 50px;
+  color: white;
+}
+
+/* .menu-button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 5%;
+} */
+
+.menu {
+  font-size: 13px;
+  background-clip: text;
+  position: absolute;
+  top: 1;
+  left: 1;
+}
+
+.info-image {
+  max-width: 40%; /* Responsive image */
+  height: auto;
+  margin-left: 80px;  
+  margin-top: 20px;
+  filter: drop-shadow(7px 7px 7px #222);
+}
+
+.header {
+  margin-top: 20px;
+  font-size: 44px;
+}
+
+.paragraph {
+  margin: 0px 0;
+  font-size: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 100px; /* Space between buttons */
+}
+
+.action-button {
+  background-color: #745488;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+
+  height: 40px;
+  width: 140px;
+}
+
+.mydiv {
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.mydivcontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
