@@ -47,7 +47,7 @@ const App = () => {
             About our product
           </h1>
           <p className="paragraph">
-            long ass explanation as to what we did          
+            Welcome to AIRA, an Artificial Intelligence (w)Riter App designed so you can create a more accessible world. Graphics, no matter how well made, aren't always easy to read. With AIRA, creating alt-text has never been easier. Simply download our Adobe Express add-on, click generate alt-text, and upload it alongside your graphic. In just three easy steps, graphic designers and content creators everywhere can ensure that the everyone can access their designs. This product was coded with React, Adobe Express CLI, and the OpenAI library. Happy creating!   
           </p>
           <div className="button-container">
             <button className="action-button">Learn More</button>
