@@ -1,13 +1,13 @@
 ## About
 
-This project has been created with _@adobe/create-ccweb-add-on_. As an example, this Add-on demonstrates how to get started with Add-on development using React and JavaScript with Document Sandbox Runtime.
+This project has been created with _@adobe/create-ccweb-add-on_. This Add-on was created to be an automatic alt text generator for Adobe Express projects.
 
 ## Tools
 
--   HTML
--   CSS
+-   Node.js
 -   React
--   JavaScript
+-   OpenAI API
+-   Adobe Create Add-On SDK
 
 ## Setup
 
