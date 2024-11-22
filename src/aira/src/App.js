@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
 import adobeimg from './adobe express.png';
+import menu from './menu button.webp';
+import test from './image.png';
+import loading from './loading image.png';
 
 import { useState } from 'react';
 function DropdownMenu() {
@@ -35,13 +38,16 @@ const App = () => {
         <img src="https://file.garden/ZhkD9yUtsAenJzxk/font.png"
         alt="Font" 
         className="font" />
-        <h1>{DropdownMenu()}</h1>
+        {/* <h1>{DropdownMenu()}</h1> */}
+        <img src= {menu}
+        alt="Font" 
+        className="menuP" />
       </header>
       <br></br>
       <br></br>
       <br></br>
         <main>
-          <img src={adobeimg} alt="Info" className="info-image" />
+          <img src="https://file.garden/ZhkD9yUtsAenJzxk/%7B926AA1A1-D782-410C-941A-7E5BF833AE40%7D.png" alt="Info" className="info-image" />
         <div className = 'shitter1'>
           <h1 className="header">
             About our product
@@ -61,47 +67,74 @@ const App = () => {
       <br></br>
       <br></br>
       
+      <div className = 'header1'>
+        <h1 className = 'line'>
+          Additional Information
+        </h1>
+        <h1 className = 'line'>
+          -------------------------------------------------
+        </h1>
+      </div>
       
       <div className="mydivcontainer">
-        <div className="mydiv" ref = {learnMoreRef}>lu la la lu la la lu la lu la lei</div>
-        <div className="mydiv">lu la lu la lu la lu la lu la lei</div>
-        <div className="mydiv">lu la la lu la la lu la lu la lei</div>
+        <div className="mydiv">
+        <br />
+        <h1 style={{ color: 'white', fontSize: '32px' }}>
+            Instructions
+          </h1>
+          <p style={{ color: 'white', fontSize: '18px' }}>
+            1. Install add-on<br /><br />
+            2. Click 'Generate Alt Text'<br /><br />
+            3. Enjoy<br /><br />
+            4. It's that easy!<br /><br />
+          </p>
+        </div>
+        <div className="mydiv">
+          <img src ={loading} className = 'test'/>
+        </div>
+        <div className="mydiv">
+        <br />
+        <h1 style={{ color: 'white', fontSize: '32px' }}>
+            Contributers
+          </h1>
+          <p style={{ color: 'white', fontSize: '18px' }}>
+            Diana Lin <br />
+            <br />
+            Ishara Shanmugasundaram <br />
+            <br />
+            Jessica Su <br />
+            <br />
+            Michelle Che <br />
+            <br />
+          </p>
+        </div>
+      </div>
+      <div className = 'line2'>
+      -------------------------------------------------
       </div>
       <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
+      <div className = 'cont'>
+        <p className = 'header'>
+          Sample Alt Text Generation
+        </p>
+        <img src ={test} className = 'test1'/>
+      </div>
+      <br></br>
+      <br></br>
+      <div className='credit'>
+        <a href = "https://github.com/dianalin2/technica-2024">
+          Github
+        </a>
+        <p className = 'linked'></p>
+        <a href = "https://devpost.com/software/aira-8u0qpj">
+          Devpost
+        </a>
+        <p>
+          @ Technica 2024
+        </p>
+      </div>
+      <br></br>
+      <br></br>
     </div>
   );
 };

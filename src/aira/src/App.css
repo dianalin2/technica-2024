@@ -48,6 +48,7 @@ main {
   gap: 100px;
   margin-right: 10px;
   margin-top: -10px;
+  color: white;
 }
 
 .app-container {
@@ -77,6 +78,12 @@ main {
   color: white;
 }
 
+.line {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+}
+
 /* .menu-button {
   background-color: white;
   color: black;
@@ -98,17 +105,46 @@ main {
   font-family: "Fira Sans", cursive;
 }
 
+.menuP {
+  width: 30px;
+  height: auto;
+}
+
 .info-image {
   max-width: 40%; /* Responsive image */
   height: auto;
   margin-left: 80px;  
   margin-top: 20px;
-  filter: drop-shadow(7px 7px 7px #222);
+  filter: drop-shadow(7px 7px 7px #e3e3e3);
+}
+
+.test {
+  width: 400px;
+  height: auto;
+}
+
+.cont {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.test1 {
+  width: 1300px;
+  height: auto;
+  margin: auto;
 }
 
 .header {
   margin-top: 20px;
   font-size: 44px;
+}
+
+.header1 {
+  font-size: 24px;
+  font-family: "Poppins", cursive;
+  font-weight: bold;
+  text-align: center;
 }
 
 .paragraph {
@@ -122,11 +158,12 @@ main {
   display: flex;
   justify-content: center;
   margin-top: 40px;
-  gap: 100px; /* Space between buttons */
+  margin-left: -30px;
+  gap: 150px; /* Space between buttons */
 }
 
 .action-button {
-  background-color: #745488;
+  background-color: rgb(188, 127, 201);
   color: white;
   border: none;
   border-radius: 16px;
@@ -144,36 +181,58 @@ main {
 }
 
 .link-button{
-  background-color: #745488;
+  background-color: rgb(188, 127, 201);
   color: white;
   border: none;
   border-radius: 16px;
   cursor: pointer;
+
 
   font-family: "Poppins", cursive;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  
+  margin: 2px 2px;
   line-height: 40px;
   height: 40px;
   width: 140px;
 }
 
 .mydiv {
-  background: #FFFFFF;
   padding: 20px;
   border-radius: 10px;
   margin: 10px;
 
+  font-family: "Poppins", cursive;
+  font-weight: bold;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 32px;
 }
 
 .mydivcontainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
+.line2 {
+  font-size: 48px;
+  font-family: "Poppins", cursive;
+  font-weight: bold;
+  font-style: italic;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.credit {
+  font-size: 24px;
+  font-family: "Poppins", cursive;
+  font-style: italic;
+  color: white;
+  text-align: center;
+}
+
